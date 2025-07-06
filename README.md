@@ -1,6 +1,42 @@
 ## Screenshots
 <img src="screenshots/ss1.png" width="200" height="400"/> <img src="screenshots/ss2.png" width="200" height="400"/> 
 
+## ✅  Challenges Faced
+
+1. **Expo Go Limitation**
+   - Initially attempted to test using Expo Go, but the CometChat SDK failed to work due to native module restrictions.
+   - ✅ *Solved* by switching to React Native CLI and running the app on the iOS Simulator using Xcode.
+
+2. **Manual User UID Setup**
+   - CometChat required manually creating a UID (`cometchat-uid-1`) via the dashboard, which wasn’t automated or documented in a beginner-friendly way.
+   - ✅ *Solved* by logging into the CometChat Dashboard and creating the user under the “Users” section.
+
+3. **Native Linking & Pod Setup**
+   - Faced issues running `pod install` and resolving native module linking during the CometChat SDK setup.
+   - ✅ *Solved* by re-installing dependencies, running `npx pod-install`, and cleaning Xcode build cache.
+
+4. **SDK Initialization Confusion**
+   - The CometChat documentation didn’t clearly specify where to place `CometChat.init()` and login logic.
+   - ✅ *Solved* by moving initialization into `useEffect()` inside the main screen component (`index.jsx`).
+
+---
+
+## ✅ Suggestions to Improve CometChat UI Kit
+
+- **Provide Expo CLI and React Native CLI specific docs separately**
+  > It can be confusing for beginners to know which setup supports native modules.
+
+- **Add automatic user creation or login fallback**
+  > Currently, the user must be created manually. Supporting guest login or signup would greatly help.
+
+- **Improve customizability of `<CometChatUI />`**
+  > It works great, but theming or UI overrides (colors, layout, fonts) would help in real-world integration.
+
+- **Show clearer error messages**
+  > Login or init failures should display UI errors, not just console logs.
+
+---
+
 
 
 
