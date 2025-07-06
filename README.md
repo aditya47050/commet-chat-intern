@@ -1,3 +1,9 @@
+## Screenshots
+<img src="screenshots/ss1.png" width="200" height="400"/> <img src="screenshots/ss2.png" width="200" height="400"/> 
+
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 
